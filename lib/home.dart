@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
         children: [
           // Header
           Container(
-            height: 200,
+            height: 150,
             width: MediaQuery.of(context).size.width,
             color: Colors.red,
             child: const Padding(
@@ -43,20 +43,23 @@ class HomePage extends StatelessWidget {
 
           // Buttons
           Expanded(
-            child: Padding(
+            child: ListView(
               padding: EdgeInsets.all(16),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  _buildButtonsRow1(),
-                  SizedBox(height: 16),
-                  _buildButtonsRow2(),
-                  SizedBox(height: 16),
-                  _buildButtonSingle()
-                ],
-              ),
+              children: [
+                // Buttons
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    _buildButtonsRow1(),
+                    SizedBox(height: 16),
+                    _buildButtonsRow2(),
+                    SizedBox(height: 16),
+                    _buildButtonSingle()
+                  ],
+                )
+              ],
             ),
-          ),
+          )
         ],
       ),
     );
