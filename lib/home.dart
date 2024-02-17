@@ -6,19 +6,15 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         children: [
-          // Red header section
+          // Header
           Container(
             height: 200,
-            // height: MediaQuery.of(context).size.height * 0.65,
             width: MediaQuery.of(context).size.width,
             color: Colors.red,
             child: const Padding(
               padding: EdgeInsets.all(16),
               child: Column(
-                // mainAxisAlignment: MainAxisAlignment.end,
-                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Greeting text
                   Text(
                     "Good morning, Angie!",
                     style: TextStyle(
@@ -26,13 +22,18 @@ class HomePage extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   ),
-
-                  // Secondary paragraph
+                  Padding(
+                    padding: EdgeInsets.only(top: 15),
+                    child: Text(
+                      "Ready to donate?",
+                      style: TextStyle(fontSize: 18, color: Colors.white),
+                    ),
+                  ),
                   Padding(
                     padding: EdgeInsets.only(top: 8),
                     child: Text(
-                      "Ready to donate? Your donation can save up to 3 lives.",
-                      style: TextStyle(fontSize: 18, color: Colors.white),
+                      "Your donation can save up to 3 lives. Make an appointment today",
+                      style: TextStyle(fontSize: 14, color: Colors.white),
                     ),
                   )
                 ],
@@ -40,58 +41,94 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
-          // Buttons section
+          // Buttons
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(16.0),
+              padding: EdgeInsets.all(16),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  // Row 1
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      _buildButton("My Appointment"),
-                      _buildButton("Donation History"),
-                      _buildButton("User Profile"),
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 16,
-                  ),
-
-                  // Row 2
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      _buildButton("Locate A Blood Bank"),
-                      _buildButton("About Blood Donation"),
-                      _buildButton("Health Form"),
-                    ],
-                  ),
-                  // const SizedBox(
-                  //   height: 16,
-                  // ),
-
-                  // Row 3
-                  _buildButton("Donor Card")
+                  _buildButtonsRow1(),
+                  SizedBox(height: 16),
+                  _buildButtonsRow2(),
+                  SizedBox(height: 16),
+                  _buildButtonSingle()
                 ],
               ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  // Button widget
+  Widget _buildButton(String text, IconData icon) {
+    // Button design
+    return Container(
+      width: 200,
+      margin: EdgeInsets.all(8),
+      child: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.all(16),
+            decoration: BoxDecoration(
+              color: Color(0xFFD9D9D9),
+              borderRadius: BorderRadius.circular(8),
+            ),
+            child: Column(
+              children: [
+                Icon(
+                  icon,
+                  size: 45,
+                  color: Colors.black,
+                ),
+                const SizedBox(height: 8),
+                Container(
+                  height: 3,
+                  width: 50,
+                  color: Colors.yellow,
+                ),
+                const SizedBox(height: 8),
+                Text(
+                  text,
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                )
+              ],
             ),
           )
         ],
       ),
     );
   }
-}
 
-// Button widget
-Widget _buildButton(String text) {
-  return SizedBox(
-    width: 100,
-    child: ElevatedButton(
-      onPressed: () {},
-      child: Text(text),
-    ),
-  );
+  // Button rows
+  Widget _buildButtonsRow1() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        _buildButton("My Appointment", Icons.calendar_month_rounded),
+        _buildButton("Donation History", Icons.list_alt_outlined),
+        _buildButton("User Profile", Icons.person),
+      ],
+    );
+  }
+
+  Widget _buildButtonsRow2() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        _buildButton("Locate A Blood Bank", Icons.location_on),
+        _buildButton("About Blood Donation", Icons.bloodtype),
+        _buildButton("Health Form", Icons.view_list_outlined),
+      ],
+    );
+  }
+
+  Widget _buildButtonSingle() {
+    return _buildButton("Donor Card", Icons.credit_card_rounded);
+  }
 }
