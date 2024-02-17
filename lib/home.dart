@@ -9,16 +9,18 @@ class HomePage extends StatelessWidget {
           // Red header section
           Container(
             height: 200,
+            // height: MediaQuery.of(context).size.height * 0.65,
+            width: MediaQuery.of(context).size.width,
             color: Colors.red,
-            child: Padding(
+            child: const Padding(
               padding: EdgeInsets.all(16),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.start,
+                // mainAxisAlignment: MainAxisAlignment.end,
+                // crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   // Greeting text
                   Text(
-                    "Good morning, Fern!",
+                    "Good morning, Angie!",
                     style: TextStyle(
                         fontSize: 25,
                         fontWeight: FontWeight.bold,
@@ -38,9 +40,58 @@ class HomePage extends StatelessWidget {
             ),
           ),
 
-          // Additional sections would go here
+          // Buttons section
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Row 1
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      _buildButton("My Appointment"),
+                      _buildButton("Donation History"),
+                      _buildButton("User Profile"),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 16,
+                  ),
+
+                  // Row 2
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      _buildButton("Locate A Blood Bank"),
+                      _buildButton("About Blood Donation"),
+                      _buildButton("Health Form"),
+                    ],
+                  ),
+                  // const SizedBox(
+                  //   height: 16,
+                  // ),
+
+                  // Row 3
+                  _buildButton("Donor Card")
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
   }
+}
+
+// Button widget
+Widget _buildButton(String text) {
+  return SizedBox(
+    width: 100,
+    child: ElevatedButton(
+      onPressed: () {},
+      child: Text(text),
+    ),
+  );
 }
