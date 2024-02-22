@@ -147,7 +147,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 44,
                 top: 399,
                 child: Text(
@@ -164,7 +164,7 @@ class HomeComponent extends StatelessWidget {
               ),
 
               //locate a blood bank
-              Positioned(
+              const Positioned(
                 left: 48,
                 top: 340,
                 child: Icon(
@@ -295,6 +295,8 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
+
+              //user profile box
               Positioned(
                 left: 255,
                 top: 187,
@@ -317,7 +319,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 282,
                 top: 200,
                 child: Icon(
@@ -326,7 +328,7 @@ class HomeComponent extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 32,
                 top: 265,
                 child: Text(
@@ -340,7 +342,19 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+
+              //User Profile
+
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => UserPage()),
+                  );
+                },
+              ),
+
+              const Positioned(
                 left: 289,
                 top: 259,
                 child: Text(
@@ -372,7 +386,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 166,
                 top: 259,
                 child: Text(
@@ -387,7 +401,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 37,
                 top: 200,
                 child: SizedBox(
@@ -417,7 +431,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 165,
                 top: 200,
                 child: Icon(
@@ -426,7 +440,7 @@ class HomeComponent extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 151,
                 top: 401,
                 child: Text(
@@ -441,7 +455,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 165,
                 top: 340,
                 child: Icon(
@@ -467,7 +481,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 289,
                 top: 404,
                 child: Text(
@@ -482,7 +496,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 285,
                 top: 345,
                 child: Icon(
@@ -508,7 +522,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 160,
                 top: 551,
                 child: Text(
@@ -523,7 +537,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
-              Positioned(
+              const Positioned(
                 left: 166,
                 top: 490,
                 child: Icon(
@@ -566,7 +580,7 @@ class HomeComponent extends StatelessWidget {
                           decoration: BoxDecoration(color: Color(0xFFBC0404)),
                         ),
                       ),
-                      Positioned(
+                      const Positioned(
                         left: 19,
                         top: 11,
                         child: SizedBox(
