@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(const HomePage());
+}
+
 class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,26 +49,44 @@ class HomePage extends StatelessWidget {
 
           // Buttons
           Expanded(
-            child: ListView(
-              padding: EdgeInsets.all(16),
-              children: [
-                // Buttons
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+            child: LayoutBuilder(
+              builder: (context, constraints) {
+                return ListView(
+                  padding: EdgeInsets.all(16),
                   children: [
-                    _buildButtonsRow1(),
-                    SizedBox(height: 16),
-                    _buildButtonsRow2(),
-                    SizedBox(height: 16),
-                    _buildButtonSingle()
+                    // Check width
+                    if (constraints.maxWidth < 800)
+                      Column(
+                        children: _buildButtonList(),
+                      )
+                    else
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          _buildButtonsRow1(),
+                          SizedBox(height: 16),
+                          _buildButtonsRow2(),
+                          SizedBox(height: 16),
+                          _buildButtonSingle()
+                        ],
+                      ),
                   ],
-                )
-              ],
+                );
+              },
             ),
           )
         ],
       ),
     );
+  }
+
+  // Button list
+  List<Widget> _buildButtonList() {
+    return [
+      _buildButtonsRow1(),
+      _buildButtonsRow2(),
+      _buildButtonSingle(),
+    ];
   }
 
   // Button widget
