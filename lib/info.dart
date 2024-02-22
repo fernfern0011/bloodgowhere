@@ -173,12 +173,12 @@ class Iphone13Mini1 extends StatelessWidget {
                         child: Container(
                           width: 375,
                           height: 72,
-                          decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                       Positioned(
-                        left: 8,
-                        top: 24,
+                        left: 55,
+                        top: 12,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -219,12 +219,12 @@ class Iphone13Mini1 extends StatelessWidget {
                         child: Container(
                           width: 375,
                           height: 72,
-                          decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                       Positioned(
-                        left: 8,
-                        top: 24,
+                        left: 48,
+                        top: 12,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -259,12 +259,12 @@ class Iphone13Mini1 extends StatelessWidget {
                         child: Container(
                           width: 375,
                           height: 72,
-                          decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                       Positioned(
-                        left: 8,
-                        top: 24,
+                        left: 120,
+                        top: 12,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
@@ -299,12 +299,12 @@ class Iphone13Mini1 extends StatelessWidget {
                         child: Container(
                           width: 375,
                           height: 72,
-                          decoration: BoxDecoration(color: Color(0xFFD9D9D9)),
+                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                       Positioned(
-                        left: 8,
-                        top: 24,
+                        left: 105,
+                        top: 12,
                         child: ElevatedButton(
                           onPressed: () {
                             Navigator.push(
