@@ -165,7 +165,7 @@ class HomeComponent extends StatelessWidget {
 
               //locate a blood bank
               Positioned(
-                left: 50,
+                left: 48,
                 top: 340,
                 child: Icon(
                   Icons.location_on,
@@ -318,8 +318,8 @@ class HomeComponent extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 285,
-                top: 197,
+                left: 282,
+                top: 200,
                 child: Icon(
                   Icons.person,
                   size: 45,
@@ -388,7 +388,7 @@ class HomeComponent extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 36,
+                left: 37,
                 top: 200,
                 child: SizedBox(
                   width: 70,
@@ -418,8 +418,8 @@ class HomeComponent extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 171,
-                top: 194,
+                left: 165,
+                top: 200,
                 child: Icon(
                   Icons.list_alt_outlined,
                   size: 45,
@@ -442,8 +442,8 @@ class HomeComponent extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 167,
-                top: 345,
+                left: 165,
+                top: 340,
                 child: Icon(
                   Icons.bloodtype,
                   size: 45,
@@ -483,8 +483,8 @@ class HomeComponent extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 280,
-                top: 342,
+                left: 285,
+                top: 345,
                 child: Icon(
                   Icons.view_list_outlined,
                   size: 45,
@@ -524,8 +524,8 @@ class HomeComponent extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 163,
-                top: 489,
+                left: 166,
+                top: 490,
                 child: Icon(
                   Icons.credit_card_rounded,
                   size: 45,
