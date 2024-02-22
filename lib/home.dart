@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'userpage.dart';
+import 'info.dart';
 
 void main() {
   runApp(const HomePage());
@@ -39,16 +41,16 @@ class HomeComponent extends StatelessWidget {
                 top: 0,
                 child: Container(
                   width: 375,
-                  height: 210,
+                  height: 220,
                   decoration: BoxDecoration(color: Color(0xFFBC0404)),
                 ),
               ),
               const Positioned(
                 left: 53,
-                top: 48,
+                top: 30,
                 child: SizedBox(
                   width: 270,
-                  height: 80,
+                  height: 70,
                   child: Text.rich(
                     TextSpan(
                       children: [
@@ -56,7 +58,7 @@ class HomeComponent extends StatelessWidget {
                           text: 'Good Afternoon,\n Angie',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 25,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.bold,
                             height: 0,
@@ -162,15 +164,15 @@ class HomeComponent extends StatelessWidget {
               ),
 
               //locate a blood bank
-              // Positioned(
-              //   left: 146,
-              //   top: 326,
-              //   child: Icon(
-              //     Icons.location_on,
-              //     size: 45,
-              //     color: Colors.black,
-              //   ),
-              // ),
+              Positioned(
+                left: 50,
+                top: 340,
+                child: Icon(
+                  Icons.location_on,
+                  size: 45,
+                  color: Colors.black,
+                ),
+              ),
               Positioned(
                 left: 40,
                 top: 395,
@@ -440,8 +442,8 @@ class HomeComponent extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 163,
-                top: 339,
+                left: 167,
+                top: 345,
                 child: Icon(
                   Icons.bloodtype,
                   size: 45,
