@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'userpage.dart';
 import 'info.dart';
 
@@ -296,64 +297,50 @@ class HomeComponent extends StatelessWidget {
                 ),
               ),
 
-              //user profile box
+              ////user profile box
               Positioned(
                 left: 255,
                 top: 187,
-                child: Container(
+                child: SizedBox(
                   width: 100,
                   height: 100,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                  child:
+                   ElevatedButton(
+                    onPressed: () {
+                      print("Button pressed. user");
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => UserPage()));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      elevation: 4,
                     ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              const Positioned(
-                left: 282,
-                top: 200,
-                child: Icon(
-                  Icons.person,
-                  size: 45,
-                  color: Colors.black,
-                ),
-              ),
-              const Positioned(
-                left: 32,
-                top: 265,
-                child: Text(
-                  'My Appointment',
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 10,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
+                    // child: Icon(
+                    //   Icons.person,
+                    //   size: 45,
+                    //   color: Colors.black,
+                    // ),
+                    child: Positioned(
+                      left: 289,
+                      top: 240,
+                      child: SizedBox(
+                        width: 70,
+                        height: 40,
+                        child: Icon(
+                          Icons.person,
+                          size: 45,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
 
               //User Profile
-
-              GestureDetector(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => UserPage()),
-                  );
-                },
-              ),
-
               const Positioned(
                 left: 289,
                 top: 259,
@@ -369,6 +356,7 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
+
               Positioned(
                 left: 274,
                 top: 254,
@@ -386,6 +374,22 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
+
+              const Positioned(
+                left: 32,
+                top: 265,
+                child: Text(
+                  'My Appointment',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 10,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w400,
+                    height: 0,
+                  ),
+                ),
+              ),
+
               const Positioned(
                 left: 166,
                 top: 259,
