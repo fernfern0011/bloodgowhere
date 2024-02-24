@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'userpage.dart';
 import 'info.dart';
+import 'main.dart';
 
 void main() {
   runApp(const HomePage());
@@ -191,28 +192,77 @@ class HomeComponent extends StatelessWidget {
                   ),
                 ),
               ),
+
               Positioned(
                 left: 138,
                 top: 331,
-                child: Container(
+                child: SizedBox(
                   width: 100,
                   height: 100,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFD9D9D9),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(10),
+                  child: ElevatedButton(
+                    onPressed: () {
+                      print("Button pressed. info");
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => InfoPage()));
+                    },
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: Color(0xFFD9D9D9),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      elevation: 4,
                     ),
-                    shadows: [
-                      BoxShadow(
-                        color: Color(0x3F000000),
-                        blurRadius: 4,
-                        offset: Offset(0, 4),
-                        spreadRadius: 0,
-                      )
-                    ],
+                    child: Positioned(
+                      left: 165,
+                      top: 340,
+                      child: SizedBox(
+                        width: 70,
+                        height: 40,
+                        child: Icon(
+                          Icons.bloodtype,
+                          size: 45,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
+
+              Positioned(
+                left: 157,
+                top: 395,
+                child: Container(
+                  width: 62,
+                  decoration: ShapeDecoration(
+                    color: Color(0xFFFFC600),
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        width: 1,
+                        strokeAlign: BorderSide.strokeAlignCenter,
+                        color: Color(0xFFFFC600),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              const Positioned(
+                left: 151,
+                top: 401,
+                child: Text(
+                  'About\nBlood Donation',
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 10,
+                    fontFamily: 'Inter',
+                    fontWeight: FontWeight.w400,
+                    height: 0,
+                  ),
+                ),
+              ),
+
               Positioned(
                 left: 255,
                 top: 331,
@@ -304,8 +354,7 @@ class HomeComponent extends StatelessWidget {
                 child: SizedBox(
                   width: 100,
                   height: 100,
-                  child:
-                   ElevatedButton(
+                  child: ElevatedButton(
                     onPressed: () {
                       print("Button pressed. user");
                       Navigator.push(context,
@@ -318,11 +367,6 @@ class HomeComponent extends StatelessWidget {
                       ),
                       elevation: 4,
                     ),
-                    // child: Icon(
-                    //   Icons.person,
-                    //   size: 45,
-                    //   color: Colors.black,
-                    // ),
                     child: Positioned(
                       left: 289,
                       top: 240,
@@ -444,47 +488,7 @@ class HomeComponent extends StatelessWidget {
                   color: Colors.black,
                 ),
               ),
-              const Positioned(
-                left: 151,
-                top: 401,
-                child: Text(
-                  'About\nBlood Donation',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 10,
-                    fontFamily: 'Inter',
-                    fontWeight: FontWeight.w400,
-                    height: 0,
-                  ),
-                ),
-              ),
-              const Positioned(
-                left: 165,
-                top: 340,
-                child: Icon(
-                  Icons.bloodtype,
-                  size: 45,
-                  color: Colors.black,
-                ),
-              ),
-              Positioned(
-                left: 157,
-                top: 395,
-                child: Container(
-                  width: 62,
-                  decoration: ShapeDecoration(
-                    color: Color(0xFFFFC600),
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        width: 1,
-                        strokeAlign: BorderSide.strokeAlignCenter,
-                        color: Color(0xFFFFC600),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
+
               const Positioned(
                 left: 289,
                 top: 404,
@@ -616,16 +620,49 @@ class HomeComponent extends StatelessWidget {
                   child: Stack(
                     children: [
                       //this is the logo
-                      // Positioned(
-                      //   left: 0,
-                      //   top: 0,
-                      //   child: Icon(
-                      //     Icons.location_on,
-                      //     size: 45,
-                      //     color: Colors.black,
-                      //   ),
-                      // ),
+                      Positioned(
+                        left: 0,
+                        top: 0,
+                        child: Container(
+                          width: 73,
+                          height: 73,
+                          decoration: const BoxDecoration(
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  'assets/images/BloodGoWhere Logo.png'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                      ),
                     ],
+                  ),
+                ),
+              ),
+
+              //logout button
+              Positioned(
+                left: 310,
+                top: 10,
+                child: TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => MyApp()),
+                    );
+                  },
+                  style: TextButton.styleFrom(
+                    backgroundColor: Color(0xFFBC0404),
+                    foregroundColor: Color(0xFFBC0404),
+                  ),
+                  child: Positioned(
+                    child: SizedBox(
+                      child: Icon(
+                        Icons.exit_to_app,
+                        size: 35,
+                        color: Colors.black,
+                      ),
+                    ),
                   ),
                 ),
               ),
