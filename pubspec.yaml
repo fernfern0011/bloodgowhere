@@ -64,10 +64,22 @@ flutter:
    - assets/images/dietary.jpg
    - assets/images/guideline.jpg
    - assets/images/location.jpg
+   - assets/achievement.svg
+   - assets/blood.png
+   - assets/blood2.svg
+   - assets/correct.svg
+   - assets/link.svg
+   - assets/medal1.svg
+   - assets/medal2.svg
+   - assets/medal3.svg
+   - assets/mobile.svg
+   - assets/t&c.svg
+   - assets/back button.png
+   
+   
 
   # To add assets to your application, add an assets section, like this:
-  assets:
-    - assets/
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

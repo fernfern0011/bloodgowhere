@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'info.dart';
 void main() {
   runApp(const FigmaToCodeApp());
 }
@@ -155,6 +155,21 @@ class ProfilePageLocations extends StatelessWidget {
                   ),
                 ),
               ),
+              Positioned(
+                        left: 0,
+                        top: 125,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => InfoPage()));
+                          },
+                          child: Container(width: 40, height: 40, 
+                          decoration: BoxDecoration( image: 
+                          DecorationImage(image: AssetImage('assets/back button.png')))
+                          ,)
+                        )),
               Positioned(
                 left: -12,
                 top: 210,
