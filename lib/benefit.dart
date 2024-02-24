@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'info.dart';
 void main() {
   runApp(const FigmaToCodeApp());
 }
@@ -92,6 +92,7 @@ class ProfilePageBenefit extends StatelessWidget {
                           decoration: BoxDecoration(color: Color(0xFFBC0404)),
                         ),
                       ),
+                      
                       Positioned(
                         left: 59,
                         top: 57,
@@ -155,6 +156,21 @@ class ProfilePageBenefit extends StatelessWidget {
                   ),
                 ),
               ),
+              Positioned(
+                        left: 0,
+                        top: 120,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => InfoPage()));
+                          },
+                          child: Container(width: 40, height: 40, 
+                          decoration: BoxDecoration( image: 
+                          DecorationImage(image: AssetImage('assets/back button.png')))
+                          ,)
+                        )),
               Positioned(
                 left: -1,
                 top: 218,
