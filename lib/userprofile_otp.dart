@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'userpage_changeno.dart';
-import 'userpage_confirmation.dart';
+import 'userprofile.dart';
+import 'userprofile_confirmation.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(const UserProfileOtpPage());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class UserProfileOtpPage extends StatelessWidget {
+  const UserProfileOtpPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,14 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          ProfilePageOtp(),
+          UserProfileOtpComponent(),
         ]),
       ),
     );
   }
 }
 
-class ProfilePageOtp extends StatelessWidget {
+class UserProfileOtpComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -390,7 +390,7 @@ class ProfilePageOtp extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          ProfilePageConfirmation()));
+                                          UserProfileConfirmationPage()));
                             },
                           )),
                     ],
@@ -443,7 +443,7 @@ class ProfilePageOtp extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          ProfilePageChangePhoneNo()));
+                                          UserProfilePage()));
                             },
                           )),
                     ],
