@@ -202,8 +202,10 @@ class HomeComponent extends StatelessWidget {
                   child: ElevatedButton(
                     onPressed: () {
                       print("Button pressed. info");
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => InfoPage()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => InformationPage()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFD9D9D9),
