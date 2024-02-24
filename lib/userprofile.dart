@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'userpage_changeno.dart';
+import 'userprofile_changeno.dart';
+import 'home.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(const UserProfilePage());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class UserProfilePage extends StatelessWidget {
+  const UserProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +18,14 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          UserPage(),
+          UserProfileComponent(),
         ]),
       ),
     );
   }
 }
 
-class UserPage extends StatelessWidget {
+class UserProfileComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,21 +37,6 @@ class UserPage extends StatelessWidget {
           decoration: BoxDecoration(color: Colors.white),
           child: Stack(
             children: [
-              Positioned(
-                left: 0,
-                top: 313,
-                child: Container(
-                  width: 375,
-                  decoration: ShapeDecoration(
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(
-                        width: 1,
-                        strokeAlign: BorderSide.strokeAlignCenter,
-                      ),
-                    ),
-                  ),
-                ),
-              ),
               Positioned(
                 left: 0,
                 top: 0,
@@ -118,8 +104,25 @@ class UserPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 19,
-                top: 151,
+                  left: 0,
+                  top: 130,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => HomePage()));
+                      },
+                      child: Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('assets/back button.png'))),
+                      ))),
+              Positioned(
+                left: 7,
+                top: 180,
                 child: SizedBox(
                   width: 183,
                   height: 32,
@@ -128,7 +131,7 @@ class UserPage extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 28,
+                      fontSize: 24,
                       fontFamily: 'Inter',
                       fontWeight: FontWeight.w400,
                       height: 0,
@@ -137,8 +140,8 @@ class UserPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 17,
-                top: 199,
+                left: 7,
+                top: 210,
                 child: SizedBox(
                   width: 220,
                   height: 32,
@@ -149,7 +152,7 @@ class UserPage extends StatelessWidget {
                           text: 'Blood Type:',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 28,
+                            fontSize: 24,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w700,
                             height: 0,
@@ -159,7 +162,7 @@ class UserPage extends StatelessWidget {
                           text: ' O+',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 28,
+                            fontSize: 24,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w400,
                             height: 0,
@@ -172,8 +175,8 @@ class UserPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 19,
-                top: 231,
+                left: 5,
+                top: 240,
                 child: SizedBox(
                   width: 277,
                   height: 32,
@@ -184,7 +187,7 @@ class UserPage extends StatelessWidget {
                           text: '# Donated:',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 28,
+                            fontSize: 24,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w700,
                             height: 0,
@@ -194,12 +197,12 @@ class UserPage extends StatelessWidget {
                           text: ' 12 times',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 28,
+                            fontSize: 24,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w400,
                             height: 0,
                           ),
-                        ),
+                        )
                       ],
                     ),
                     textAlign: TextAlign.center,
@@ -207,8 +210,8 @@ class UserPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 195,
-                top: 267,
+                left: 260,
+                top: 245,
                 child: SizedBox(
                     width: 23,
                     height: 23,
@@ -218,19 +221,19 @@ class UserPage extends StatelessWidget {
                     )),
               ),
               Positioned(
-                left: 19,
-                top: 265,
+                left: 25,
+                top: 278,
                 child: SizedBox(
-                    width: 28,
-                    height: 28,
+                    width: 25,
+                    height: 25,
                     child: SvgPicture.asset(
                       'assets/blood2.svg',
                       fit: BoxFit.contain,
                     )),
               ),
               Positioned(
-                left: -21,
-                top: 263,
+                left: -30,
+                top: 275,
                 child: SizedBox(
                   width: 277,
                   height: 32,
@@ -241,7 +244,7 @@ class UserPage extends StatelessWidget {
                           text: 'Points:',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 28,
+                            fontSize: 24,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w700,
                             height: 0,
@@ -251,7 +254,7 @@ class UserPage extends StatelessWidget {
                           text: ' 36',
                           style: TextStyle(
                             color: Colors.black,
-                            fontSize: 28,
+                            fontSize: 24,
                             fontFamily: 'Inter',
                             fontWeight: FontWeight.w400,
                             height: 0,
@@ -264,8 +267,8 @@ class UserPage extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 299,
-                top: 236,
+                left: 170,
+                top: 275,
                 child: SizedBox(
                     width: 23,
                     height: 23,
@@ -273,6 +276,21 @@ class UserPage extends StatelessWidget {
                       'assets/link.svg',
                       fit: BoxFit.contain,
                     )),
+              ),
+              Positioned(
+                left: 0,
+                top: 313,
+                child: Container(
+                  width: 375,
+                  decoration: ShapeDecoration(
+                    shape: RoundedRectangleBorder(
+                      side: BorderSide(
+                        width: 1,
+                        strokeAlign: BorderSide.strokeAlignCenter,
+                      ),
+                    ),
+                  ),
+                ),
               ),
               Positioned(
                 left: 17,
@@ -567,7 +585,7 @@ class UserPage extends StatelessWidget {
                                   context,
                                   MaterialPageRoute(
                                       builder: (context) =>
-                                          ProfilePageChangePhoneNo()));
+                                          UserProfileChangeNoPage()));
                             },
                           )),
                     ],

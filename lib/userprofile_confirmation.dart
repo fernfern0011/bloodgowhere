@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'userpage.dart';
+import 'userprofile.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(const UserProfileConfirmationPage());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class UserProfileConfirmationPage extends StatelessWidget {
+  const UserProfileConfirmationPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,14 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          ProfilePageConfirmation(),
+          UserProfileConfirmationComponent(),
         ]),
       ),
     );
   }
 }
 
-class ProfilePageConfirmation extends StatelessWidget {
+class UserProfileConfirmationComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -210,7 +210,7 @@ class ProfilePageConfirmation extends StatelessWidget {
                                           context,
                                           MaterialPageRoute(
                                               builder: (context) =>
-                                                  UserPage()));
+                                                  UserProfilePage()));
                                     },
                                   )),
                             ],

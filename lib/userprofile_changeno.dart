@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'userpage.dart';
-import 'userpage_otp.dart';
+import 'userprofile.dart';
+import 'userprofile_otp.dart';
 
 void main() {
-  runApp(const FigmaToCodeApp());
+  runApp(const UserProfileChangeNoPage());
 }
 
-class FigmaToCodeApp extends StatelessWidget {
-  const FigmaToCodeApp({super.key});
+class UserProfileChangeNoPage extends StatelessWidget {
+  const UserProfileChangeNoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +17,14 @@ class FigmaToCodeApp extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          ProfilePageChangePhoneNo(),
+          UserProfileChangeNoComponent(),
         ]),
       ),
     );
   }
 }
 
-class ProfilePageChangePhoneNo extends StatelessWidget {
+class UserProfileChangeNoComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -203,7 +203,8 @@ class ProfilePageChangePhoneNo extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => ProfilePageOtp()));
+                                      builder: (context) =>
+                                          UserProfileOtpPage()));
                             },
                           )),
                     ],
@@ -233,7 +234,7 @@ class ProfilePageChangePhoneNo extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                          left: 7,
+                          left: 5,
                           top: 14,
                           child: TextButton(
                             child: SizedBox(
@@ -255,7 +256,7 @@ class ProfilePageChangePhoneNo extends StatelessWidget {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => UserPage()));
+                                      builder: (context) => UserProfilePage()));
                             },
                           )),
                     ],

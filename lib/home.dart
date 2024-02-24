@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'userpage.dart';
+import 'userprofile.dart';
 import 'info.dart';
 import 'main.dart';
 
@@ -360,7 +359,7 @@ class HomeComponent extends StatelessWidget {
                     onPressed: () {
                       print("Button pressed. user");
                       Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => UserPage()));
+                          MaterialPageRoute(builder: (context) => UserProfilePage()));
                     },
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Color(0xFFD9D9D9),

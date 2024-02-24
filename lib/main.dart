@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
-import 'home.dart';
 import 'login.dart';
-import 'registration.dart';
-import 'otp.dart';
 
 void main() {
   runApp(const MyApp());
