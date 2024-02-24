@@ -3,6 +3,7 @@ import 'guideline.dart';
 import 'benefit.dart';
 import 'locations.dart';
 import 'dietary.dart';
+import 'home.dart';
 
 void main() {
   runApp(const InformationPage());
@@ -159,7 +160,21 @@ class InfoComponent extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
+              ),Positioned(
+                        left: 0,
+                        top: 130,
+                        child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => HomePage()));
+                          },
+                          child: Container(width: 40, height: 40, 
+                          decoration: BoxDecoration( image: 
+                          DecorationImage(image: AssetImage('assets/back button.png')))
+                          ,)
+                        )),
               Positioned(
                 left: 0,
                 top: 187,
