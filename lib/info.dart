@@ -20,14 +20,14 @@ class InformationPage extends StatelessWidget {
       ),
       home: Scaffold(
         body: ListView(children: [
-          InfoPage(),
+          InfoComponent(),
         ]),
       ),
     );
   }
 }
 
-class InfoPage extends StatelessWidget {
+class InfoComponent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -131,7 +131,8 @@ class InfoPage extends StatelessWidget {
                                   height: 73,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                      image:AssetImage('assets/images/BloodGoWhere Logo.png'),
+                                      image: AssetImage(
+                                          'assets/images/BloodGoWhere Logo.png'),
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -145,7 +146,8 @@ class InfoPage extends StatelessWidget {
                                   height: 73,
                                   decoration: const BoxDecoration(
                                     image: DecorationImage(
-                                      image: AssetImage('assets/images/BloodGoWhere Logo.png'),
+                                      image: AssetImage(
+                                          'assets/images/BloodGoWhere Logo.png'),
                                       fit: BoxFit.cover,
                                     ),
                                   ),
@@ -173,7 +175,8 @@ class InfoPage extends StatelessWidget {
                         child: Container(
                           width: 375,
                           height: 72,
-                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                       Positioned(
@@ -194,7 +197,6 @@ class InfoPage extends StatelessWidget {
                           ),
                           child: const Text('Donation Guideline'),
                         ),
-
                       ),
                       Positioned(
                         left: 24,
@@ -219,7 +221,8 @@ class InfoPage extends StatelessWidget {
                         child: Container(
                           width: 375,
                           height: 72,
-                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                       Positioned(
@@ -259,7 +262,8 @@ class InfoPage extends StatelessWidget {
                         child: Container(
                           width: 375,
                           height: 72,
-                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                       Positioned(
@@ -299,7 +303,8 @@ class InfoPage extends StatelessWidget {
                         child: Container(
                           width: 375,
                           height: 72,
-                          decoration: BoxDecoration(color: Color.fromARGB(255, 255, 255, 255)),
+                          decoration: BoxDecoration(
+                              color: Color.fromARGB(255, 255, 255, 255)),
                         ),
                       ),
                       Positioned(

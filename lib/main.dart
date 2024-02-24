@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.red),
         useMaterial3: true,
       ),
-      home: UserPage(),
+      home: LandingPage(),
     );
   }
 }
@@ -37,6 +37,7 @@ class _LandingPageState extends State<LandingPage> {
         child: ElevatedButton(
           child: Text('Login'),
           onPressed: () {
+            print("Button pressed. home");
             Navigator.push(
                 context, MaterialPageRoute(builder: (context) => HomePage()));
           },
