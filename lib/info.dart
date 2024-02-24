@@ -184,7 +184,7 @@ class InfoPage extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => guidelinepage()));
+                                    builder: (context) => GuidelinePage()));
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
@@ -230,7 +230,7 @@ class InfoPage extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => benefitpage()));
+                                    builder: (context) => BenefitPage()));
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
@@ -270,7 +270,7 @@ class InfoPage extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => dietarypage()));
+                                    builder: (context) => DietaryPage()));
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
@@ -310,7 +310,7 @@ class InfoPage extends StatelessWidget {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => locationpage()));
+                                    builder: (context) => LocationPage()));
                           },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.red,
